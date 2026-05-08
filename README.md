@@ -112,7 +112,12 @@ Update database:
 ```bash
 dotnet ef database update
 ```
-
+## Reset the database and migrations from scratch.
+```bash
+-dotnet ef database drop --force
+-dotnet ef migrations add InitialCreate
+-dotnet ef database update
+```
 ## Troubleshooting
 
 - Docker container not running: verify the container is up with `docker ps` and start it if needed.
